@@ -5,14 +5,14 @@ class Program
     static void Main(string[] args)
     {
         
-        int magicNumber = 8;
+        
+        Random randomGenerator = new Random();
+        int magicNumber = randomGenerator.Next(1, 100);
         Console.Write("What is your guess? ");
-        string number = Console.ReadLine();
-        int guess = int.Parse(number);
-        // Random randomGenerator = new Random();
-        // int number = randomGenerator.Next(1, 20);
+            string number = Console.ReadLine();
+            int guess = int.Parse(number);
         while (guess != magicNumber)
-        {
+        {   
             if (guess > magicNumber)
             {
                 Console.WriteLine("Lower");
@@ -21,10 +21,11 @@ class Program
             {
                 Console.WriteLine("Higher");
             }
-        }    
-      /*  else 
-        {
-            Console.WriteLine("Correct. You've guessed it.");
-        } */
+            Console.Write("What is your guess? ");
+            number = Console.ReadLine();
+            guess = int.Parse(number);
+        }   
+        
+        Console.WriteLine("Correct. You've guessed it.");
     }
 }
