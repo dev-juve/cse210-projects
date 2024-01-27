@@ -14,6 +14,7 @@ public class Word
     {
         _isHidden = true;
     }
+    
     public void Show()
     {
        _isHidden = false;

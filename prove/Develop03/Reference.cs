@@ -7,17 +7,17 @@ public class Reference
 
    public Reference(string book, int chapter, int verse, int endVerse)
    {
-        _book = book;
-        _chapter = chapter;
-        _verse = verse;
-        _endVerse = endVerse;
+      _book = book;
+      _chapter = chapter;
+      _verse = verse;
+      _endVerse = endVerse;
    }
 
    public Reference(string book, int chapter, int verse)
    {
-        _book = book;
-        _chapter = chapter;
-        _verse = verse;
+      _book = book;
+      _chapter = chapter;
+      _verse = verse;
    }
 
    public string GetDisplayText()
@@ -31,7 +31,6 @@ public class Reference
       {
          reference = $"{_book} {_chapter}:{_verse}";
       }
-    
       return reference;
    }  
 }

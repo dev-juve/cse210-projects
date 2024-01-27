@@ -20,22 +20,25 @@ class Program
         
         do
         {
-          
             Console.WriteLine(myReference.GetDisplayText());
             Console.WriteLine(myScripture.GetDisplayText());
+
             Console.WriteLine("");
             Console.Write("Press enter or type 'quit': ");
-            
             input = Console.ReadLine();
+
             if (input.ToLower() == "quit")
             {
                 break;
             }
+
             Console.Clear();
+
             myScripture.HideRandomWords(3); 
 
         } 
         while (!myScripture.IsCompletelyHidden() && input.ToLower() != "quit");
+        
         Console.WriteLine(myReference.GetDisplayText());
         Console.WriteLine(myScripture.GetDisplayText());
         Console.WriteLine("");
