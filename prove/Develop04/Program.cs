@@ -44,7 +44,9 @@ class Program
             }
             else
             {
+                Console.WriteLine("");
                 Console.WriteLine("Incorrect option. Try again.");
+                Console.WriteLine("");
             }
             
 
