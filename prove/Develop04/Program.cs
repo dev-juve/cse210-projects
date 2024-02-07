@@ -20,7 +20,7 @@ class Program
         
         int option = 0;
 
-        do
+        while (!(option == 4))
         {
             Console.WriteLine("Menu Options:");
             Console.WriteLine("  1. Start breathing activity");
@@ -29,6 +29,7 @@ class Program
             Console.WriteLine("  4. Quit");
             Console.Write("Select a choice from the menu: ");
             string input = Console.ReadLine();
+            Console.Clear();
             option = int.Parse(input);
             if (option == 1)
             {
@@ -42,6 +43,10 @@ class Program
             {
                 listing.run();
             }
+            else if (option == 4)
+            {
+                break;
+            }
             else
             {
                 Console.WriteLine("");
@@ -49,8 +54,7 @@ class Program
                 Console.WriteLine("");
             }
             
-
-        }while (option != 4);
+        }
 
         
 

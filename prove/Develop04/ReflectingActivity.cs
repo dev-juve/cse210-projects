@@ -41,15 +41,16 @@ public class ReflectingActivity : Activity
         Console.WriteLine("");
 
         DisplayPrompt();
+        Console.WriteLine("");
         
-        Console.WriteLine("When you have something in mind, press enter to contnue.");
+        Console.WriteLine("When you have something in mind, press enter to continue.");
         Console.ReadLine();
         Console.WriteLine("Now ponder on each of the following questions as they related to this experience.");
         Console.Write("You may begin in: ");
         ShowCountDown(5);
         Console.WriteLine("");
 
-        /* int part = 0;
+         int part = 0;
         if (_duration < 20)
         {
             part = _duration;
@@ -77,16 +78,18 @@ public class ReflectingActivity : Activity
         else
         {
             part = _duration / 4;
-        }*/
+        }
 
         DateTime startTime = DateTime.Now;
         DateTime futureTime = startTime.AddSeconds(_duration);
         while (DateTime.Now < futureTime)
         {
+            Console.WriteLine("");
             DisplayQuestions();
-            Console.ReadLine();
+            ShowSpinner(part);
         }
 
+        Console.WriteLine("");
         DisplayEndingMessage();
 
     }
@@ -125,12 +128,12 @@ public class ReflectingActivity : Activity
 
     public void DisplayPrompt()
     {
-        Console.WriteLine(GetRandomPrompt());
+        Console.WriteLine($"--{GetRandomPrompt()}--");
     }
 
     public void DisplayQuestions()
     {
-        Console.WriteLine(GetRandomQuestion());
+        Console.Write(GetRandomQuestion());
     }
 
     

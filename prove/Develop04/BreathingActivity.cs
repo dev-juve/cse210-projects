@@ -35,10 +35,10 @@ public class BreathingActivity : Activity
         {
             Console.WriteLine("");
             Console.Write("Breathe in...");
-            ShowCountDown(part);
+            ShowCountDown(part-2);
             Console.WriteLine("");
             Console.Write("Breathe out...");
-            ShowCountDown(part);
+            ShowCountDown(part+2);
             Console.WriteLine("");
         }
 

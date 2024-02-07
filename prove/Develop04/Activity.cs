@@ -25,6 +25,7 @@ public class Activity
     {
         Console.WriteLine("");
         Console.WriteLine("Well done!");
+        Console.WriteLine("");
         ShowSpinner(5);
         Console.WriteLine($"You have completed another {_duration} seconds of the {_name}.");
         ShowSpinner(5);
@@ -49,13 +50,17 @@ public class Activity
         DateTime endTime = startTime.AddSeconds(second);
         int i = 0;
         while (DateTime.Now < endTime)
-
         {
             string symbol = symbols[i];
             Console.Write(symbol);
             Thread.Sleep(1000);
             Console.Write("\b \b");
             i++;
+            if (i == symbols.Count)
+            {
+                i = 0;
+            }
+
         }
     }
 
@@ -63,6 +68,7 @@ public class Activity
     {
         Console.Write("How long, in seconds, would you like for your session? ");
         string input = Console.ReadLine();
+        Console.Clear();
         int duration = int.Parse(input);
         return duration;
     }
