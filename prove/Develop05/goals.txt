@@ -1,0 +1,4 @@
+Total Points: 700
+SimpleGoal:Complete an assignment:Get done with my weekly university assignment:100:True
+EternalGoal:Workout:Go to the gym every morning:50
+ChecklistGoal:Be the lead student:Lead the weekly online gathering for my programming class:350:3:3:300

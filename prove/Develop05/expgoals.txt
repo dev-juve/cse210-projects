@@ -1,0 +1,5 @@
+Total Points: 550
+SimpleGoal:Workout:Get this progam done:100:True:02/14/2024
+SimpleGoal:Learn to cook:Learn receipes online :100:True
+EternalGoal:Pray Heavenly Father:Pray at least once a day:50
+ChecklistGoal:Improve communication skills:Lead the weekly gathering for the programming class:250:3:3:200
